@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Polymer</title>
+<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+<script src="bower_components/platform/platform.js"></script>
+<!-- <link rel="import" href="bower_components/core-tooltip/core-tooltip.html">-->
+<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="bower_components/core-icons/core-icons.html">
+<link rel="import" href="bower_components/core-icons/social-icons.html">
+<link rel="import" href="bower_components/paper-elements/paper-elements.html">
+<link rel="import" href="elements/hello-world.html">
+<style>
+core-toolbar {
+	background:#333;
+	color:#fff;
+}
+core-icon[icon="polymer"] {
+	color:blue;
+	height:50px;
+	width:50px;
+}
+.example {
+	background:#333;
+	padding:10px;
+}
+.example>div {
+	background:#EEE;
+	margin:10px;
+}
+paper-button {
+	background:#3f51b5;
+	color:#fff;
+}
+paper-button::shadow #ripple {
+	color:red;
+}
+paper-tabs {
+	background:#3f51b5;
+}
+paper-tabs::shadow #selectionBar {
+	background-color:#e040fb;
+}
+.ripple-shadow {
+	display:inline-block;
+}
+.ripple {
+	width:200px;
+	height:200px;
+	border:1px solid #333;
+	position:relative;
+}
+hello-world::shadow h1 {color:#333;}
+</style>
+</head><body fullbleed layout vertical>
+	<!-- <hello-world name="Chris"></hello-world> -->
+	<core-header-panel flex>
+		<core-toolbar>
+			<div>Hello</div>
+		</core-toolbar>
+		<paper-shadow class="ripple-shadow" z="5">
+			<div class="ripple">
+				<paper-ripple fit></paper-ripple>
+			</div>
+		</paper-shadow>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, magni.</p>
+
+		<!-- <core-icon icon="polymer"></core-icon>
+		<core-icon icon="android"></core-icon>
+		<core-icon icon="social:post-instagram"></core-icon> -->
+		<div class="example" layout vertical>
+			<div flex three>One</div>
+			<div flex>Two</div>
+			<div flex two>Three</div>
+		</div>
+
+		<paper-tabs selected="0">
+			<paper-tab>TAB 1</paper-tab>
+			<paper-tab>TAB 2</paper-tab>
+			<paper-tab>TAB 3</paper-tab>
+		</paper-tabs>
+
+		<paper-checkbox></paper-checkbox>
+		<paper-button raised>Button 1</paper-button>
+	</core-header-panel>
+
+	<!-- <core-tooltip label="Hello, I'm a tooltip" position="right">
+		<span>Hover over me.</span>
+	</core-tooltip> -->
+</body></html>

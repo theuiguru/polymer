@@ -1,0 +1,27 @@
+{
+  "name": "polymer",
+  "authors": [
+    "Chris Thomas <webmaster102@gmail.com>"
+  ],
+  "description": "Polymer Test",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^3.0.2",
+    "platform": "Polymer/platform#^0.4.2",
+    "core-component-page": "Polymer/core-component-page#^0.5.6",
+    "core-elements": "Polymer/core-elements#^0.5.6"
+  },
+  "resolutions": {
+    "polymer": "^0.5",
+    "webcomponentsjs": "^0.5"
+  }
+}
