@@ -1,0 +1,37 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href-"shared-styles.html">
+
+<dom-module id="birthday-input">
+	<template>
+		<style include="shared-styles"></style>
+
+		<div class="label">Birthday</div>
+
+		<input placeholder="mm" maxlength="2" id="month">
+
+		<span>/</span>
+
+		<input placeholder="dd" maxlength="2" id="2">
+	</template>
+
+	<script>
+		Polymer({
+			is: 'birthday-input',
+
+			properties: {
+				birthday: {
+					type: String,
+					notify: true
+				}
+			},
+
+			listeners: {
+				'input': '_onInput'
+			},
+
+			_onInput: function() {
+				this.birthday = this.s.month.value.trim() + '/' + this.s.day.value.trim();
+			}
+		});
+	</script>
+</dom-module>

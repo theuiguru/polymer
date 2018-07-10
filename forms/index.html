@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><title>Birthday</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
+<link rel="import" href="form-styles.html">
+<style is="custom-style" include="form-styles"></style>
+<link rel="import" href="birthday-input.html">
+</head><body>
+	<template is="dom-bind">
+		<form action="http://httpbin.org/get" method="get">
+			<!-- <birthday-input></birthday-input> -->
+			<birthday-input birthday="{{_date}}"></birthday-input>
+			<input type="submit" class="btn">
+			<input name="birthday" value="[[_date]]" hidden>
+		</form>
+	</template>
+
+</body></html>
